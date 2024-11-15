@@ -10,6 +10,17 @@ const config = {
 
 const mysql = require('mysql');
 const connection = mysql.createConnection(config);
+const criaTabela = `
+  CREATE TABLE IF NOT EXISTS people (
+    id INT PRIMARY KEY,
+    name VARCHAR(100)
+  )
+`;
+
+connection.query(criaTabela, (err, results) => {
+  if (err) throw err;
+  console.log('Table created or already exists');
+});
 
 function insertAndFetchData(callback) {
     let insert1 = "INSERT INTO people(name) values ('desune')";
