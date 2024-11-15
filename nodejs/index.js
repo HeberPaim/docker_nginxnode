@@ -23,9 +23,9 @@ connection.query(criaTabela, (err, results) => {
 });
 
 function insertAndFetchData(callback) {
-    let insert1 = "INSERT INTO people(name) values ('desune')";
-    let insert2 = "INSERT INTO people(name) values ('batata')";
-    let insert3 = "INSERT INTO people(name) values ('desu')";
+    let insert1 = "INSERT INTO people(name) values ('joao')";
+    let insert2 = "INSERT INTO people(name) values ('maria')";
+    let insert3 = "INSERT INTO people(name) values ('Selenio')";
 
     connection.query(insert1, (error) => {
         if (error) throw error;
