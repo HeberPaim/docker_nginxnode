@@ -12,8 +12,8 @@ const mysql = require('mysql');
 const connection = mysql.createConnection(config);
 const criaTabela = `
   CREATE TABLE IF NOT EXISTS people (
-    id INT PRIMARY KEY,
-    name VARCHAR(100)
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL
   )
 `;
 
