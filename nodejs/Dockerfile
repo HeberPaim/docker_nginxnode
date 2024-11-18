@@ -15,8 +15,8 @@ RUN apt-get remove -y wget && apt-get clean && rm -rf /var/lib/apt/lists/*
 
 
 WORKDIR /app
-
 COPY . .
+RUN npm install
 
 EXPOSE 3000
 CMD ["dockerize", "-wait", "tcp://db:3306", "-timeout", "30s", "node", "index.js"]
